@@ -11,7 +11,6 @@ It allows users to manage their daily tasks efficiently with a clean and modern 
 -  Mark tasks as completed  
 -  Delete tasks
 -  Edit tasks    
--  Fully responsive design  
 -  Fast performance with Vite
 
 ---
