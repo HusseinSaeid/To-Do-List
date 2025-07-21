@@ -10,7 +10,9 @@ It allows users to manage their daily tasks efficiently with a clean and modern 
 -  Add new tasks  
 -  Mark tasks as completed  
 -  Delete tasks
--  Edit tasks    
+-  Edit tasks
+-  Save data to local storage
+-  Fully responsive on every screen    
 -  Fast performance with Vite
 
 ---
