@@ -167,16 +167,17 @@ export default function ToDo({ todo }) {
             paddingTop: 2,
             paddingBottom: 2,
           },
-          marginTop: 4,
-          minWidth: 275,
+          mt: 4,
+          minWidth: { xs: "100%", sm: 275 }, // شاشة صغيرة يأخذ العرض بالكامل، من sm وأعلى 275px
           backgroundColor: "primary.main",
           color: "white",
           opacity: todo.isCompleted ? 1 : 0.8,
+          padding: { xs: 1, sm: 2, md: 3 }, // padding ريسبونسيف
         }}
       >
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid sx={{ marginTop: 3 }} size={8}>
+          <Grid container spacing={2} alignItems="center">
+            <Grid item xs={12} sm={8} sx={{ marginTop: 3 }}>
               {/* Todo title */}
               <Typography
                 variant="h5"
@@ -188,8 +189,27 @@ export default function ToDo({ todo }) {
                 {todo.title}
               </Typography>
             </Grid>
-            <Grid size={4}>
-              <Stack sx={{ marginTop: 2 }} direction="row" spacing={1}>
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginLeft: "auto",
+                flexDirection: { xs: "column", sm: "row" },
+              }}
+            >
+              <Stack
+                direction="row"
+                spacing={1}
+                sx={{
+                  mt: { xs: 2, sm: 0 },
+                  justifyContent: "flex-end",
+                  display: "flex",
+                }}
+              >
                 {/* Complete button */}
                 <IconButton
                   onClick={handleCheckClick}
